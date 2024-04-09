@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: rgb(180, 175, 175);
+    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    color: white;
+    text-transform: lowercase;
+    letter-spacing: -3px;
+}
+
+.logo span:first-child {
+    color: blueviolet;
+}
+
+.logo span:last-child {
+    font-size: 10px;
+    letter-spacing: normal;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li{
+    position: relative;
+}
+
+.menu li a {
+    padding: 17px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    display: block;
+}
+
+.menu > li:hover {
+    background-color: blueviolet;
+}
+
+.menu > li:hover > .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: blueviolet;
+    min-width: 110%;
+}
+
+.submenu > li + .submenu{
+    position: absolute;
+    left: 100;
+}
+
+.submenu li + .submenu {
+    position: relative;
+}
+
+.submenu > li:hover .submenu {
+    display: block;
+    position: absolute;
+    left: 132px;
+    top: 0;
+}
+
+.submenu > li:hover {
+    background-color: rgb(86, 0, 167);
+}
